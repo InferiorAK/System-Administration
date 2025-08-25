@@ -1,4 +1,4 @@
-## <center> Day 18: Configure LAMP server
+## <center> Day 18: Configure LAMP server </center>
 
 ```
 xFusionCorp Industries is planning to host a WordPress website on their infra in Stratos Datacenter. They have already done infrastructure configuration—for example, on the storage server they already have a shared directory /vaw/www/html that is mounted on each app host under /var/www/html directory. Please perform the following steps to accomplish the task:
@@ -16,6 +16,44 @@ e. Finally you should be able to access the website on LBR link, by clicking on 
 ```
 
 ---
+
+### <center> LAMP Server Overview </center>
+
+**LAMP** is an acronym for **Linux, Apache, MySQL/MariaDB, PHP** – a popular stack for hosting dynamic websites and web applications.
+
+| Component | Role |
+|-----------|------|
+| **Linux** | The operating system that provides the foundation for all services. Popular distros: Ubuntu, CentOS, RHEL. |
+| **Apache** | The web server software that handles HTTP requests, serves web pages, and manages virtual hosts. |
+| **MySQL / MariaDB** | The relational database management system (RDBMS) used to store, manage, and query data for applications. |
+| **PHP** | Server-side scripting language used to generate dynamic web content and interact with the database. |
+
+---
+
+### How it works together
+
+1. **Client sends HTTP request** → hits Apache.  
+2. **Apache processes PHP scripts** → PHP may query the database (MySQL/MariaDB).  
+3. **Database returns data** → PHP generates HTML dynamically.  
+4. **Apache serves the response** → client sees the webpage.  
+
+### Key Features
+
+- Open-source and widely used.  
+- Modular: can replace components (e.g., MariaDB for MySQL, Nginx for Apache).  
+- Ideal for hosting WordPress, Drupal, Joomla, and custom PHP apps.  
+- Supports remote database connections, multiple virtual hosts, and SSL/TLS.  
+
+### Optional Enhancements
+
+- **Firewall**: secure ports (80/443 for HTTP/HTTPS, 3306 for MySQL/MariaDB).  
+- **SELinux/AppArmor**: restricts processes for security.  
+- **Load balancers**: distribute traffic among multiple app servers (as in your setup).  
+- **Caching & optimization**: e.g., OPCache for PHP, query caching in MariaDB.  
+
+---
+
+### <center> Setup and Configure Solution </center>
 
 ### On App Servers
 
