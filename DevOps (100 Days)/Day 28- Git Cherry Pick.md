@@ -46,4 +46,4 @@ There are two branches in this repository, master and feature. One of the develo
     sudo git push origin master
     ```
 
-> ***Note**: Working in sude mode is better fot this Challenge*
+> ***Note**: Working in sudo mode is better for this Challenge*
